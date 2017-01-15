@@ -1,0 +1,29 @@
+{% extends "template.twig" %}
+
+{% block title %}
+    TOP 10
+{% endblock %}
+
+{% block body %}
+    <div class="hero-unit">
+        <h1>TOP 10 des volumes data facturés </h1>
+    </div>
+    <div class="row-fluid">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Num. Abonne</th>
+                    <th>Volumes DATA facturés</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for abonnes in result %}
+                    <tr>
+                        <td>{{ abonnes['abonne'] }}</td>
+                        <td>{{ abonnes['duree_facture'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

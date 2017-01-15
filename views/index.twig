@@ -1,0 +1,21 @@
+{% extends "template.twig" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+    <div class="hero-unit">
+        <h1>Home</h1>
+    </div>
+    <div class="row-fluid">
+
+        {{ form_start(form) }}
+            {{ form_widget(form.envoi, {'attr': {'class':'btn btn-primary'}}) }}
+        {{ form_end(form) }}
+        
+        {% if msg is not null %}
+            <div class="alert alert-info">{{ msg }}</div>
+        {% endif %}
+    </div>
+{% endblock %}

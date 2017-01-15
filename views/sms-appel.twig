@@ -1,0 +1,20 @@
+{% extends "template.twig" %}
+
+{% block title %}
+    SMS et Appels
+{% endblock %}
+
+{% block body %}
+    <div class="hero-unit">
+        <h1>SMS et Appels</h1>
+    </div>
+    <div class="row-fluid">
+        <p>
+            <b>quantité totale de SMS envoyés par l'ensemble des abonnés :</b> {{ resultSms['total']|number_format(0, ',', ' ') }}
+        </p>
+        
+        <p>
+            <b>durée totale réelle des appels effectués après le 15/02/2012 (inclus) :</b> {{ resultAppel }}
+        </p>
+    </div>
+{% endblock %}
